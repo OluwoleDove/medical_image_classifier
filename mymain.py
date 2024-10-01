@@ -8,11 +8,11 @@ import initialize
 from model import train_model, device, model
 
 # Initialize the model, loss function, and optimizer
-new_obj = initialize()
+initialize
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 # Train the model for 10 epochs
-train_model(model, initialize.train_loader, initialize.val_loader, initialize.criterion, optimizer, num_epochs=10)
+train_model(model, initialize.train_loader, initialize.val_loader, criterion, optimizer, num_epochs=10)
 
 
 
