@@ -15,7 +15,6 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 train_model(model, initialize.train_loader, initialize.val_loader, criterion, optimizer, num_epochs=10)
 
 
-
 def test_model(model, test_loader):
     model.eval()  # Set model to evaluation mode
     correct = 0
@@ -33,7 +32,6 @@ def test_model(model, test_loader):
 test_model(model, initialize.test_loader)
 
 
-
 def imshow(img):
     img = img / 2 + 0.5  # Unnormalize the image
     npimg = img.numpy()
@@ -42,7 +40,7 @@ def imshow(img):
 
 # Get some random test images
 dataiter = iter(initialize.test_loader)
-images, labels = dataiter.next()
+images, labels = next(dataiter)  # Change this line
 
 # Print images
 imshow(torchvision.utils.make_grid(images))
